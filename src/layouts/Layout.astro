@@ -33,9 +33,11 @@ const { title, descripcion } = Astro.props;
 		--fontheading: 'PT Sans', sans serif;
 		--fontparagraph: 'Open Sans', sans serif;
 		--primario: #556c86;
+		--primario-bold: #0a58ca;
 		--blanco: #fff;
 		--negro: #000;
 		--secundario: #cfe2ff;
+		--terciario: #
 		--gris:#f8f9fa;
 	}
 	html {
@@ -59,8 +61,14 @@ const { title, descripcion } = Astro.props;
 		font-family: var(--fontheading);
 		line-height: 1.2;
 	}
+	a{text-decoration: none;}
 	h1{font-size: 2.8rem;}
 	h2{font-size: 2.4rem;}
 	h3{font-size: 2rem;}
 	h4{font-size: 1.6rem;}
+	p{font-size: 1.4rem;}
+	img{width: 100%;}
+	.no-margin{margin: 0;}
+	.no-padding{padding: 0;}
+	.text-c{text-align: center;}
 </style>
