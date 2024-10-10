@@ -1,0 +1,120 @@
+<header class="header">
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo" /> 
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li class="popover-container">
+          <a href="#" class="dropdown-trigger">Información Judicial &#9662;</a>
+          <div class="popover-content">
+            <a href="#">Notas de Prensa</a>
+            <a href="#">Comunicaciones</a>
+            <a href="#">Preguntas Frecuentes</a>
+          </div>
+        </li>
+        <li class="popover-container">
+          <a href="#" class="dropdown-trigger">Organización &#9662;</a>
+          <div class="popover-content">
+            <a href="#">Pleno</a>
+            <a href="#">Secretaria General</a>
+            <a href="#">Secretaria Judicial</a>
+          </div>
+        </li>
+        <li><a href="#">Transparencia</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .logo{
+      width: 15%; 
+      height: auto; 
+      margin-left: 3%;
+    }
+  
+    body {
+      font-family: Open Sans, sans-serif;
+    }
+  
+    .header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav ul li {
+      position: relative;
+      color: black;
+    }
+
+    .nav ul li a {
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+      color: black; 
+    }
+
+    .popover-container {
+      position: relative;
+    }
+
+    .popover-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+      top: 100%;
+      left: 0;
+      padding: 10px;
+    }
+
+    .popover-content a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: black;
+    }
+
+   
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
+      dropdownTriggers.forEach(trigger => {
+        const popoverContent = trigger.nextElementSibling;
+
+        trigger.addEventListener('click', function(event) {
+          event.preventDefault();
+          popoverContent.style.display = popoverContent.style.display === 'block' ? 'none' : 'block';
+        });
+
+        document.addEventListener('click', function(event) {
+          if (!trigger.contains(event.target) && !popoverContent.contains(event.target)) {
+            popoverContent.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
