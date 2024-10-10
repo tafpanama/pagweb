@@ -36,7 +36,37 @@ import Layout from '../layouts/Layout.astro';
 						</li>
 					</ul>
 			</div>
-			<div class="canal"></div>
+			<div class="canal">
+				<h2>Para recursos de apelación contra acciones de recursos 
+					humanos, tales como: traslados, 
+					vacaciones, capacitaciones, etc. </h2>
+					<ul>
+						<li> 
+							<a href="mailto:otrasapelaciones1@tafp.gob.pa">
+								otrasapelaciones1@tafp.gob.pa
+							</a> 
+							Para los residentes de Provincias de Panamá y Panamá Oeste.
+						</li>
+						<li>
+							<a href="otrasapelaciones2@tafp.gob.pa">
+								otrasapelaciones2@tafp.gob.pa
+							</a>
+							Para los residentes de las otras provincias.
+						</li>
+						<li>
+							Guía descargable para presentar tu solicitud: 
+							<a href="https://www.tafp.gob.pa/assets/archivos/16-9-24%20NUEVA%20GUIA%20SALA%20UNITARIA.docx">
+								AQUÍ
+							</a>.
+						</li>
+						<li>
+							Guía descargable para presentar tu solicitud: 
+							<a href="https://www.tafp.gob.pa/assets/archivos/16-9-24%20NUEVA%20GUIA%20SALA%20UNITARIA.docx">
+								AQUÍ
+							</a>.
+						</li>
+					</ul>
+			</div>
 			<div class="canal"></div>
 		</div>
 	</main>
@@ -47,7 +77,8 @@ import Layout from '../layouts/Layout.astro';
 		color: var(--black);
 		font-weight: bold;
 	}
-	A:hover{
+	a:hover{
+		transition: all 0.1s ease-in-out;
 		color: var(--primario-bold);
 	}
 	p{
@@ -58,6 +89,26 @@ import Layout from '../layouts/Layout.astro';
 	}
 	.ginfo{
 		padding: 5.5rem;
+		width: min(70%, 80rem);
+		margin: 0 auto;
+	}
+	.canales{
+		display: flex;
+		flex-flow: row wrap;
+		align-items: stretch;
+		justify-content: space-between;
+		gap: 2rem;
+		width: 100%;
+		height: fit-content;
+	}
+	.canal{
+		background-color: var(--blanco);
+		width: min(90%, 38rem);
+		padding: 3rem !important;
+		height: auto;
+		border-radius: 1rem;
+		box-shadow: -0.2rem 0.3rem 0 0#e3e3e3;
+		border: 0.1rem solid #e6e6e6;
 	}
 </style>
 
