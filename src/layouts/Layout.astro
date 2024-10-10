@@ -1,4 +1,5 @@
 ---
+import Header from '../components/Header.astro'
 interface Props {
 	title: string;
 	descripcion: string;
@@ -23,7 +24,7 @@ const { title, descripcion } = Astro.props;
 		<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 	</head>
-
+	<Header />
 	<body>
 		<slot />
 	</body>
